@@ -12,30 +12,26 @@ public class TimeValidation {
         System.out.print("Enter minutes: ");
         int minutes = input.nextInt();
 
-        boolean timeValid =areHoursValid(hours) && areMinutesValid(minutes); // Call validation methods
-        
-        System.out.Println("Time valid: " + timeValid);
+        boolean timeValid = false;
+        if (areHoursValid(hours) && areMinutesValid(minutes)){
+            timeValid = true;
+        }
+        System.out.println("Time valid: " + timeValid);
     }
 
 
     public static boolean areHoursValid(int hours) {
-        // Implement method
-        if(hours<0 || hours>=24){
+        if(hours >= 0 && hours < 24) {
+            return true;
+        }
         return false;
-        }
-        else {
-          return true;
-        }
     }
 
 
     public static boolean areMinutesValid(int minutes) {
-        // Implement method
-        if(minutes<0 || minutes>=60){
+        if (minutes >= 0 && minutes < 60){
+            return true;
+        }
         return false;
-        }
-        else{
-          return true;
-        }
     }
 }
