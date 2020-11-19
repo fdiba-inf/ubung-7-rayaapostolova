@@ -14,7 +14,7 @@ public class TimeValidation {
 
         boolean timeValid =areHoursValid(hours) && areMinutesValid(minutes); // Call validation methods
         
-        System.out.println("Time valid: " + timeValid);
+        System.out.Println("Time valid: " + timeValid);
     }
 
 
